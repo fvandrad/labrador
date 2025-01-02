@@ -1,0 +1,154 @@
+:root {
+    --color-serenity: #c4dbe0;
+    --color-turquoise: #2eb5e0;
+    --color-cyan: #00a8a8;
+    --color-midnight-blue: #0c6980;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--color-midnight-blue); /* Usando a nova cor */
+    padding: 10px 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Adicionando sombra */
+}
+
+.logo {
+    color: var(--color-serenity); /* Usando a nova cor */
+    font-size: 24px;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    opacity: 0.9;
+}
+
+.nav-links li {
+    margin-left: 20px;
+}
+
+.nav-links a {
+    color: var(--color-serenity); /* Usando a nova cor */
+    text-decoration: none;
+    font-size: 18px;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: var(--color-turquoise); /* Usando a nova cor */
+}
+
+.nav-links {
+    transition: transform 0.5s ease-in-out;
+}
+
+.hamburger.toggle .line {
+    transition: all 0.3s ease;
+}
+
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.hamburger .line {
+    width: 30px;
+    height: 4px;
+    background-color: var(--color-serenity); /* Usando a nova cor */
+    margin: 5px 0;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    border-radius: 2px;
+}
+
+.hero {
+    display: flex;
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero .text {
+    padding: 10px;
+}
+
+
+.hero iframe {
+    width: 280px;
+    height: 500px;
+    border: none;
+    margin-bottom: 20px;
+}
+.hero div iframe button {
+    position: relative;
+    padding: 10px 20px;
+    margin: 5px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    background: #007bff;
+    color: white;
+    cursor: pointer;
+    top: 0;
+    margin-left: -295px;
+    opacity: 0.8;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+.hero div iframe button:hover {
+    background: #0056b3;
+}
+
+.hero div iframe #prev {
+    margin-right: 0;
+}
+
+.hero div iframe #next {
+    margin-left: 205px;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .nav-links {
+        position: absolute;
+        right: 0;
+        height: 100vh;
+        top: 0;
+        background-color: var(--color-midnight-blue); /* Usando a nova cor */
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        transform: translateX(100%);
+        transition: transform 0.5s ease-in;
+    }
+
+    .nav-links li {
+        margin: 20px 0;
+    }
+
+    .hamburger {
+        display: flex;
+    }
+
+    .nav-active {
+        transform: translateX(0);
+    }
+}
+
+/* hero */
