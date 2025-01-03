@@ -1,2 +1,4 @@
-# Auto detect text files and perform LF normalization
 * text=auto
+*.html linguística=HTML
+*.css linguística=CSS
+*.js linguística=JavaScript
