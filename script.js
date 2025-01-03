@@ -91,3 +91,15 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Lightbox functionality can be added here
 });
+
+// fullscreen
+function openFullscreen(src) {
+    const fullscreen = document.querySelector('.fullscreen');
+    const fullscreenImage = fullscreen.querySelector('img');
+    fullscreenImage.src = src;
+    fullscreen.style.display = 'flex';
+}
+
+function closeFullscreen() {
+    document.querySelector('.fullscreen').style.display = 'none';
+}
