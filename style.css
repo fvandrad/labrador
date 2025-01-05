@@ -140,6 +140,15 @@ iframe {
     height: 500px;
     border: none;
     border-radius: 10px;
+    vertical-align: middle;
+}
+
+.sponsors {
+    border: 0; border-radius: 6px;
+    height: 32px;
+    width: 114px;
+
+
 }
 
 .controls {
