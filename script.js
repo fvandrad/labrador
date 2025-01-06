@@ -50,7 +50,7 @@ nextButton.addEventListener('click', () => {
 });
 
 // about
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
     const elements = document.querySelectorAll('.about-section, .card');
     const observer = new IntersectionObserver(entries => {
         entries.forEach(entry => {
@@ -92,7 +92,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // Lightbox functionality can be added here
 });
 
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
     const options = {
         root: null,
         rootMargin: '0px',
@@ -110,7 +110,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Select elements to animate
     const elements = document.querySelectorAll('.about-text, .about-image, .card, .gallery-item, .testimonial-card');
-    
+
     elements.forEach(element => {
         element.classList.add('animate-on-scroll');
         observer.observe(element);
