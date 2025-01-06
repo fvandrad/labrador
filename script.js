@@ -91,3 +91,28 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Lightbox functionality can be added here
 });
+
+document.addEventListener('DOMContentLoaded', function() {
+    const options = {
+        root: null,
+        rootMargin: '0px',
+        threshold: 0.1
+    };
+
+    const observer = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('animated');
+                observer.unobserve(entry.target); // Stop observing once animated
+            }
+        });
+    }, options);
+
+    // Select elements to animate
+    const elements = document.querySelectorAll('.about-text, .about-image, .card, .gallery-item, .testimonial-card');
+    
+    elements.forEach(element => {
+        element.classList.add('animate-on-scroll');
+        observer.observe(element);
+    });
+});
