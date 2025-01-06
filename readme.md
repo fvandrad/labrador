@@ -25,4 +25,4 @@ Para visualizar o site, basta abrir o arquivo `index.html` em um navegador da we
 
 ## Licença
 
-Este projeto está licenciado sob a [Licença MIT](LICENSE).
+Este projeto está licenciado sob a Licença MIT.
