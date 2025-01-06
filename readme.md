@@ -17,7 +17,7 @@ Labrador é um projeto dedicado a fornecer informações sobre a raça Labrador 
 
 ## 📸 Galeria
 
-A seção de galeria apresenta imagens de Labradores, permitindo que os visitantes cliquem para visualizar em tela cheia.
+A seção de galeria apresenta imagens de Labradores, permitindo filtros.
 
 ## 📄 Licença
 
