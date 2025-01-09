@@ -1,6 +1,6 @@
 :root {
     --color-serenity: #c4dbe0;
-    --color-turquoise: #2eb5e0;
+    --color-turquoise: #2eb5e0    ;
     --color-cyan: #00a8a8;
     --color-midnight-blue: #0c6980;
 }
@@ -26,65 +26,85 @@ body {
     justify-content: space-between;
     align-items: center;
     background-color: var(--color-midnight-blue);
-    /* Usando a nova cor */
-    padding: 10px 20px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    /* Adicionando sombra */
+    padding: 15px 30px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    transition: all 0.3s ease;
 }
 
 .logo {
-    color: var(--color-serenity);
-    /* Usando a nova cor */
-    font-size: 24px;
+    color: #fff;
+    font-size: 28px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    transition: transform 0.3s ease;
+}
+
+.logo:hover {
+    transform: scale(1.05);
 }
 
 .nav-links {
     list-style: none;
     display: flex;
-    opacity: 0.9;
+    opacity: 1;
     z-index: 1;
+    gap: 30px;
 }
 
 .nav-links li {
     margin-left: 20px;
+    position: relative;
 }
 
 .nav-links a {
     color: var(--color-serenity);
-    /* Usando a nova cor */
     text-decoration: none;
     font-size: 18px;
-    transition: color 0.3s;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    padding: 8px 12px;
+    border-radius: 4px;
 }
 
 .nav-links a:hover {
     color: var(--color-turquoise);
-    /* Usando a nova cor */
+    background-color: rgba(255, 255, 255, 0.1);
+    transform: translateY(-2px);
 }
 
 .nav-links {
-    transition: transform 0.5s ease-in-out;
+    transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .hamburger.toggle .line {
-    transition: all 0.3s ease;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .hamburger {
     display: none;
     flex-direction: column;
     cursor: pointer;
+    padding: 8px;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+.hamburger:hover {
+    background-color: rgba(255, 255, 255, 0.1);
 }
 
 .hamburger .line {
-    width: 30px;
-    height: 4px;
+    width: 32px;
+    height: 3px;
     background-color: var(--color-serenity);
-    /* Usando a nova cor */
-    margin: 5px 0;
-    transition: transform 0.3s ease, background-color 0.3s ease;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-    border-radius: 2px;
+    margin: 4px 0;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
 }
 
 /* Responsividade */
@@ -397,63 +417,71 @@ iframe {
 
 /* care section */
 .care-section {
-    padding: 50px 20px;
-    background-color: var(--color-serenity);
+    padding: 80px 40px;
+    background: linear-gradient(135deg, var(--color-serenity) 0%, #ffffff 100%);
     text-align: center;
     min-height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
+    position: relative;
+    overflow: hidden;
 }
 
 .care-section h2 {
-    font-size: 2.5em;
-    margin-bottom: 20px;
+    font-size: 3.2em;
+    margin-bottom: 40px;
     color: var(--color-midnight-blue);
-    padding: 20px 20px;
+    padding: 20px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+    animation: fadeIn 1.2s ease-out;
 }
 
 .card-container {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 20px;
+    gap: 30px;
+    padding: 20px;
+    perspective: 1000px;
 }
 
 .card {
-    background: linear-gradient(135deg, var(--color-turquoise), var(--color-cyan));
+    background: linear-gradient(135deg, var(--color-turquoise) 0%, var(--color-cyan) 100%);
     color: white;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    max-width: 300px;
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.12);
+    max-width: 320px;
     flex: 1 1 300px;
-    transition: transform 0.3s, box-shadow 0.3s;
-    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-    animation: floatUp 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+    transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+    animation: floatUp 1s cubic-bezier(0.4, 0, 0.2, 1);
+    backdrop-filter: blur(5px);
+    border: 1px solid rgba(255,255,255,0.1);
 }
 
 .card h3 {
-    font-size: 1.5em;
-    margin-bottom: 10px;
+    font-size: 1.8em;
+    margin-bottom: 15px;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
 }
 
 .card p {
-    font-size: 1em;
-    line-height: 1.6;
+    font-size: 1.1em;
+    line-height: 1.8;
+    letter-spacing: 0.3px;
 }
 
 .card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-    transform: translateY(-15px) scale(1.03);
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+    transform: translateY(-20px) scale(1.05) rotateX(5deg);
+    box-shadow: 0 25px 50px rgba(0,0,0,0.2);
+    background: linear-gradient(135deg, var(--color-cyan) 0%, var(--color-turquoise) 100%);
 }
 
 /* Media Queries for Responsiveness */
 @media (max-width: 768px) {
     .care-section h2 {
-        font-size: 2em;
+        font-size: 2.5em;
     }
 
     .card {
@@ -464,23 +492,23 @@ iframe {
 
 @media (max-width: 480px) {
     .care-section {
-        padding: 30px 10px;
+        padding: 40px 15px;
     }
 
     .care-section h2 {
-        font-size: 1.8em;
+        font-size: 2em;
     }
 
     .card {
-        padding: 15px;
+        padding: 25px;
     }
 
     .card h3 {
-        font-size: 1.3em;
+        font-size: 1.5em;
     }
 
     .card p {
-        font-size: 0.9em;
+        font-size: 1em;
     }
 }
 
