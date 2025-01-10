@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -15,13 +16,15 @@
             height: 100vh;
             background-color: #f9f9f9;
         }
-        
+
         iframe {
-            width: 280px;
-            height: 500px;
+
+            width: 342px;
+            height: 608px;
             border: none;
             margin-bottom: 20px;
         }
+
         button {
             padding: 10px 20px;
             margin: 5px;
@@ -31,31 +34,34 @@
             background: #007bff;
             color: white;
             cursor: pointer;
-            top: -300px;
+            top: -350px;
             position: relative;
             opacity: 0.8;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
-
-
         }
+
         button:hover {
             background: #0056b3;
         }
 
-        button, #prev {
-            left: -100px;
-        } 
-        
-        button, #next {
-            left: 100px;
+        button,
+        #prev {
+            left: -150px;
+        }
+
+        button,
+        #next {
+            left: 150px;
         }
     </style>
 </head>
+
 <body>
-    <iframe id="youtube-short" src="https://www.youtube.com/embed/6uO72zt3WBk?autoplay=1" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+    <iframe id="youtube-short" src="https://www.youtube.com/embed/6uO72zt3WBk?autoplay=1"
+        allow="autoplay; encrypted-media" allowfullscreen></iframe>
     <div>
-        <button id="prev"><</button>
-        <button id="next">></button>
+        <button id="prev">⬅️</button>
+        <button id="next">➡️</button>
     </div>
 
     <script>
@@ -93,4 +99,5 @@
         });
     </script>
 </body>
+
 </html>
