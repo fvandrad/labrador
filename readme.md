@@ -19,6 +19,12 @@ Labrador é um projeto dedicado a fornecer informações sobre a raça Labrador 
 
 A seção de galeria apresenta imagens de Labradores, permitindo filtros.
 
+## 🤝 Contribuição
+Contribuições são bem-vindas! Envie um pull request ou abra uma issue.
+
+## Apoie Nosso Projeto
+Ajude-nos a continuar criando projetos incríveis e apoiando o desenvolvimento de código aberto. Considere se tornar um patrocinador e juntos alcançaremos grandes conquistas!
+
 ## 📄 Licença
 
 Este projeto está licenciado sob a Licença MIT.
