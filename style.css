@@ -39,7 +39,7 @@ body {
     font-size: 28px;
     font-weight: bold;
     letter-spacing: 1px;
-    text-transform: uppercase;
+    /* text-transform: uppercase; */
     transition: transform 0.3s ease;
 }
 
@@ -52,7 +52,7 @@ body {
     display: flex;
     opacity: 1;
     z-index: 1;
-    gap: 30px;
+    gap: 5px;
 }
 
 .nav-links li {
