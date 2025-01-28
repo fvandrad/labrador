@@ -52,7 +52,8 @@ body {
     display: flex;
     opacity: 1;
     z-index: 1;
-    gap: 5px;
+    gap: 0px;
+    align-items: center;
 }
 
 .nav-links li {
